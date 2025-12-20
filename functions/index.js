@@ -653,7 +653,8 @@ export async function onRequest(context) {
         hideDesc: ${layoutHideDesc},
         hideLinks: ${layoutHideLinks},
         hideCategory: ${layoutHideCategory},
-        gridCols: "${layoutGridCols}"
+        gridCols: "${layoutGridCols}",
+        cardStyle: "${layoutCardStyle}"
       };
     </script>
   `;

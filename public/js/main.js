@@ -532,6 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const hideDesc = config.hideDesc === true;
       const hideLinks = config.hideLinks === true;
       const hideCategory = config.hideCategory === true;
+      const cardStyle = config.cardStyle || 'style1';
       
       sitesGrid.innerHTML = '';
       
@@ -575,12 +576,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </span>`;
         
         const frostedClass = isFrostedEnabled ? 'frosted-glass-effect' : '';
+        const cardStyleClass = cardStyle === 'style2' ? 'style-2' : '';
         const baseCardClass = isFrostedEnabled
             ? 'site-card group rounded-xl overflow-hidden transition-all' 
             : 'site-card group bg-white border border-primary-100/60 rounded-xl shadow-sm overflow-hidden';
         
         const card = document.createElement('div');
-        card.className = `${baseCardClass} ${frostedClass} card-anim-enter`;
+        card.className = `${baseCardClass} ${frostedClass} ${cardStyleClass} card-anim-enter`;
         const delay = Math.min(index, 20) * 30;
         if (delay > 0) {
             card.style.animationDelay = `${delay}ms`;
